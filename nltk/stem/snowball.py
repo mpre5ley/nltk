@@ -1464,9 +1464,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step0_suffixes
-            if word.endswith(self.__step0_suffixes)
-            else ()
+            self.__step0_suffixes if word.endswith(self.__step0_suffixes) else ()
         ):
             if word.endswith(suffix):
                 word = word[: -len(suffix)]
@@ -1478,9 +1476,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step1a_suffixes
-            if word.endswith(self.__step1a_suffixes)
-            else ()
+            self.__step1a_suffixes if word.endswith(self.__step1a_suffixes) else ()
         ):
             if word.endswith(suffix):
                 if suffix == "sses":
@@ -1514,9 +1510,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step1b_suffixes
-            if word.endswith(self.__step1b_suffixes)
-            else ()
+            self.__step1b_suffixes if word.endswith(self.__step1b_suffixes) else ()
         ):
             if word.endswith(suffix):
                 if suffix in ("eed", "eedly"):
@@ -1594,9 +1588,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step2_suffixes
-            if word.endswith(self.__step2_suffixes)
-            else ()
+            self.__step2_suffixes if word.endswith(self.__step2_suffixes) else ()
         ):
             if word.endswith(suffix):
                 if r1.endswith(suffix):
@@ -1726,9 +1718,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step3_suffixes
-            if word.endswith(self.__step3_suffixes)
-            else ()
+            self.__step3_suffixes if word.endswith(self.__step3_suffixes) else ()
         ):
             if word.endswith(suffix):
                 if r1.endswith(suffix):
@@ -1783,9 +1773,7 @@ class EnglishStemmer(_StandardStemmer):
         # One C-level endswith() against the whole suffix tuple skips
         # the rule-by-rule scan when no rule of this step can apply.
         for suffix in (
-            self.__step4_suffixes
-            if word.endswith(self.__step4_suffixes)
-            else ()
+            self.__step4_suffixes if word.endswith(self.__step4_suffixes) else ()
         ):
             if word.endswith(suffix):
                 if r2.endswith(suffix):

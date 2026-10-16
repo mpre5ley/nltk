@@ -212,6 +212,7 @@ def main():
         )
     with open(args.out, "w") as f:
         json.dump(results, f, indent=2)
+        f.write("\n")
     print("wrote", args.out)
 
 

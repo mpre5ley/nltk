@@ -390,7 +390,7 @@ def main():
             + page
             + "\n</head></html>"
         )
-    open(args.out, "w").write(page)
+    open(args.out, "w").write(page + "\n")
     print("wrote", args.out)
 
 
